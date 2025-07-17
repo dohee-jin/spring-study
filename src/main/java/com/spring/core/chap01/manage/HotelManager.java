@@ -22,6 +22,15 @@ public class HotelManager {
 
     // 호텔의 의존객체를 조립해주는 기능
     public Hotel hotel() {
+
+        // 생성자 주입
         return new Hotel(restaurant(), chef());
+
+        // 세터 주입
+        /*Hotel hotel = new Hotel();
+        hotel.setRestaurant(restaurant());
+        hotel.setHeadChef(chef());
+
+        return hotel;*/
     }
 }
