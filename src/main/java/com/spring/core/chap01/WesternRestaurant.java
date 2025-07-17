@@ -4,16 +4,16 @@ package com.spring.core.chap01;
 public class WesternRestaurant implements Restaurant{
 
     // 메인 쉐프 고용
-    private JannChef mainChef;
+    private Chef mainChef;
 
     // 요리 코스 구성
-    private FrenchCourse course;
+    private Course course;
 
 
     // 생성자
-    public WesternRestaurant() {
-        this.mainChef = new JannChef();
-        this.course = new FrenchCourse();
+    public WesternRestaurant(Chef chef, Course course) {
+        this.mainChef = chef;
+        this.course = course;
     }
 
     // 주문 기능

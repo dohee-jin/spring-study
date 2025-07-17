@@ -11,15 +11,16 @@ public class Hotel {
 
     // 생성자
 
-    public Hotel() {
-        this.restaurant = new AsianRestaurant();
+    public Hotel(Restaurant restaurant, Chef chef) {
+        this.restaurant = restaurant;
         // this.headChef = new StephaneChef(); // DIP 위반, Jann에 너무 의존중
-        this.headChef = new KimuraChef();
+        this.headChef = chef;
     }
 
     // 레스토랑 예약 기능
     public void reserve() {
         System.out.println("레스토랑을 예약합니다.");
+        System.out.println("헤드셰프명:  " + headChef.getClass().getSimpleName());
         restaurant.order();
     }
 }
